@@ -35,7 +35,7 @@
 #define VIEW_DISTANCE 4
 
 // Time between server ticks in microseconds (default = 1s)
-#define TIME_BETWEEN_TICKS 1000000
+#define TIME_BETWEEN_TICKS 200000
 
 // Calculated from TIME_BETWEEN_TICKS
 #define TICKS_PER_SECOND ((float)1000000 / TIME_BETWEEN_TICKS)
