@@ -32,10 +32,10 @@
 #define GAMEMODE 0
 
 // Max render distance, determines how many chunks to send
-#define VIEW_DISTANCE 4
+#define VIEW_DISTANCE 6
 
 // Time between server ticks in microseconds (default = 1s)
-#define TIME_BETWEEN_TICKS 200000
+#define TIME_BETWEEN_TICKS 500000
 
 // Calculated from TIME_BETWEEN_TICKS
 #define TICKS_PER_SECOND ((float)1000000 / TIME_BETWEEN_TICKS)
@@ -53,14 +53,14 @@
 #define CHUNK_SIZE 8
 
 // Terrain low point - should start a bit below sea level for rivers/lakes
-#define TERRAIN_BASE_HEIGHT 60
+#define TERRAIN_BASE_HEIGHT 90
 
 // Cave generation Y level
 #define CAVE_BASE_DEPTH 24
 
 // Size of every major biome in multiples of CHUNK_SIZE
 // For best performance, should also be a power of 2
-#define BIOME_SIZE (CHUNK_SIZE * 8)
+#define BIOME_SIZE (CHUNK_SIZE * 16)
 
 // Calculated from BIOME_SIZE
 #define BIOME_RADIUS (BIOME_SIZE / 2)
@@ -68,11 +68,11 @@
 // How many visited chunk coordinates to "remember"
 // The server will not re-send chunks that the player has recently been in
 // Must be at least 1, otherwise chunks will be sent on each position update
-#define VISITED_HISTORY 4
+#define VISITED_HISTORY 2
 
 // How many player-made block changes to allow
 // Determines the fixed amount of memory allocated to blocks
-#define MAX_BLOCK_CHANGES 20000
+#define MAX_BLOCK_CHANGES 80000
 
 // If defined, writes and reads world data to/from disk (or flash).
 // This is a synchronous operation, and can cause performance issues if
@@ -90,7 +90,7 @@
 // applies only to player data. Block changes are written as soon as they
 // are made, but in much smaller portions. Set DISK_SYNC_BLOCKS_ON_INTERVAL
 // to make this apply to block changes as well.
-#define DISK_SYNC_INTERVAL 15000000
+#define DISK_SYNC_INTERVAL 30000000
 
 // Whether to sync block changes to disk on an interval, instead of syncing
 // on each change. On systems with fast random disk access, this shouldn't
