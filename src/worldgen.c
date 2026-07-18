@@ -72,18 +72,18 @@ uint8_t getCornerHeight (uint32_t hash, uint8_t biome) {
 
     case W_plains: {
       height += (
-        (hash & 3) +
-        (hash >> 4 & 3) +
-        (hash >> 8 & 3) +
-        (hash >> 12 & 3)
+        (hash & 7) +
+        (hash >> 4 & 7) +
+        (hash >> 8 & 7) +
+        (hash >> 12 & 7)
       );
       break;
     }
 
     case W_desert: {
       height += 4 + (
-        (hash & 3) +
-        (hash >> 4 & 3)
+        (hash & 7) +
+        (hash >> 4 & 7)
       );
       break;
     }
@@ -91,18 +91,19 @@ uint8_t getCornerHeight (uint32_t hash, uint8_t biome) {
     case W_beach: {
       // Start slightly below sea level to ensure it's all water
       height = 62 - (
-        (hash & 3) +
-        (hash >> 4 & 3) +
-        (hash >> 8 & 3)
+        (hash & 7) +
+        (hash >> 4 & 7) +
+        (hash >> 8 & 7)
       );
       break;
     }
 
     case W_snowy_plains: {
       // Use fewer components with larger ranges to create hills
-      height += (
-        (hash & 7) +
-        (hash >> 4 & 7)
+      height += 5 + (
+        (hash & 15) +
+        (hash >> 4 & 15)
+        (hash >> 8 & 7)
       );
       break;
     }
