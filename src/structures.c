@@ -12,7 +12,6 @@ void setBlockIfReplaceable (short x, uint8_t y, short z, uint8_t block) {
   makeBlockChange(x, y, z, block);
 }
 
-#include "structures.h"
 
 // Funkcja budująca prosty domek
 void placeHouse(short x, uint8_t y, short z) {
