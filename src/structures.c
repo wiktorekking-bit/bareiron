@@ -12,6 +12,37 @@ void setBlockIfReplaceable (short x, uint8_t y, short z, uint8_t block) {
   makeBlockChange(x, y, z, block);
 }
 
+#include "structures.h"
+
+// Funkcja budująca prosty domek
+void placeHouse(short x, uint8_t y, short z) {
+    // Podłoga z desek dębowych (oak_planks - dodaj to do whitelist w JS, jeśli trzeba)
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            makeBlockChange(x + i, y, z + j, B_OAK_PLANKS);
+        }
+    }
+    
+    // Ściany z bloków mchu (moss_carpet - z Twojej listy) lub innych dostępnych
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (i == 0 || i == 3 || j == 0 || j == 3) {
+                makeBlockChange(x + i, y + 1, z + j, B_COBBLESTONE_SLAB);
+                makeBlockChange(x + i, y + 2, z + j, B_COBBLESTONE_SLAB);
+            }
+        }
+    }
+}
+
+// Funkcja tworząca ścieżkę
+void placePath(short x, uint8_t y, short z, int length) {
+    for (int i = 0; i < length; i++) {
+        makeBlockChange(x + i, y - 1, z, B_GRASS_PATH); 
+    }
+}
+
+#include "structures.h"
+
 // Places a tree centered on the input coordinates
 void placeTreeStructure (short x, uint8_t y, short z) {
 
