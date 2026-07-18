@@ -20,19 +20,19 @@
 
 // How many players to keep in memory, NOT the amount of concurrent players
 // Even when offline, players who have logged on before take up a slot
-#define MAX_PLAYERS 16
+#define MAX_PLAYERS 8
 
 // How many mobs to allocate memory for
-#define MAX_MOBS (MAX_PLAYERS)
+#define MAX_MOBS 10
 
 // Manhattan distance at which mobs despawn
-#define MOB_DESPAWN_DISTANCE 256
+#define MOB_DESPAWN_DISTANCE 128
 
 // Server game mode: 0 - survival; 1 - creative; 2 - adventure; 3 - spectator
 #define GAMEMODE 0
 
 // Max render distance, determines how many chunks to send
-#define VIEW_DISTANCE 2
+#define VIEW_DISTANCE 4
 
 // Time between server ticks in microseconds (default = 1s)
 #define TIME_BETWEEN_TICKS 1000000
