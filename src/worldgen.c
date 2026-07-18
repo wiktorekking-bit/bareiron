@@ -24,8 +24,8 @@ uint32_t getChunkHash (short x, short z) {
 uint8_t getChunkBiome (short x, short z) {
 
   // Center biomes on 0;0
-  x += BIOME_RADIUS;
-  z += BIOME_RADIUS;
+ // x += BIOME_RADIUS;
+ // z += BIOME_RADIUS;
 
   // Calculate distance from biome center
   int8_t dx = BIOME_RADIUS - mod_abs(x, BIOME_SIZE);
