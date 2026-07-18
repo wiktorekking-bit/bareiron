@@ -144,7 +144,7 @@ uint8_t getHeightAtFromHash (int rx, int rz, int _x, int _z, uint32_t chunk_hash
 
   if (rx == 0 && rz == 0) {
     int height = getCornerHeight(chunk_hash, biome);
-    if (height > 67) return height - 1;
+    if (height > 90) return height - 1;
   }
   return interpolate(
     getCornerHeight(chunk_hash, biome),
