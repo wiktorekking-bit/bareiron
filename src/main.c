@@ -3,6 +3,8 @@
 #include <string.h>
 #include <fcntl.h>
 #include <errno.h>
+#include "zabezpieczenia.h"
+
 
 #ifndef CLOCK_REALTIME
 #define CLOCK_REALTIME 0
