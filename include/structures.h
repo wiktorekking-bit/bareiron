@@ -2,5 +2,6 @@
 #define H_STRUCTURES
 
 void placeTreeStructure (short x, uint8_t y, short z);
+void placeVillageHouse(short x, uint8_t y, short z);
 
 #endif
