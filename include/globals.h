@@ -23,7 +23,7 @@
 #define MAX_PLAYERS 8
 
 // How many mobs to allocate memory for
-#define MAX_MOBS 10
+#define MAX_MOBS 6
 
 // Manhattan distance at which mobs despawn
 #define MOB_DESPAWN_DISTANCE 128
