@@ -48,7 +48,7 @@ for (int i = 0; i < 4; i++) {
 }
 
 // Pochodnia przy ścianie
-makeBlockChange(x, y + 1, z - 1, B_TORCH); 
+makeBlockChange(x + 1, y, z, B_TORCH);
 
 #include "structures.h"
 
