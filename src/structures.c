@@ -40,6 +40,16 @@ void placePath(short x, uint8_t y, short z, int length) {
     }
 }
 
+// Dach domku
+for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+        makeBlockChange(x + i, y + 3, z + j, B_COBBLESTONE_SLAB);
+    }
+}
+
+// Pochodnia przy ścianie
+makeBlockChange(x, y + 1, z - 1, B_TORCH); 
+
 #include "structures.h"
 
 // Places a tree centered on the input coordinates
