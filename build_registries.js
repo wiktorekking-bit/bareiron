@@ -60,7 +60,11 @@ const blockWhitelist = [
   "composter",
   "coal_block",
   "copper_ore",
-  "copper_block"
+  "copper_block",
+  "air",
+  "water",
+  "torch",
+  "oak_fence"
 ];
 
 // Currently, only 4 biome types are supported, excluding "beach"
@@ -75,7 +79,7 @@ const biomes = [
 // Extract item and block data from registry dump
 async function extractItemsAndBlocks () {
 
-  // Block network IDs are defined in their own JSON file
+  // Block network IDs are defined in their own JSONfile
   // The item JSON file doesn't define IDs, we get those from the registries
   const blockSource = JSON.parse(await fs.readFile(`${__dirname}/notchian/generated/reports/blocks.json`, "utf8"));
 
